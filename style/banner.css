@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --pear-can: #e6ffde;
@@ -18,6 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .bannerTop {
@@ -401,86 +403,160 @@ button {
 
 .fitgreen-animated-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* flex-direction: column; */  
   min-height: 100vh;
   padding: 4rem 1rem;
   background-color: #111;
   color: #fff;
   position: relative;
-  text-align: center;
-
-  .fitgreen-content {
-    z-index: 2;
-
-    .fitgreen-headline {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      opacity: 0;
-      transform: translateY(30px);
-      position: relative;
-      display: inline-block;
-      background: linear-gradient(90deg, #fff, #888, #fff);
-      background-size: 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: background-position 0.4s ease;
-    }
-
-    .fitgreen-headline:hover {
-      background-position: 200% center;
-    }
-
-    .fitgreen-subtext {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      opacity: 0;
-      transform: translateY(30px);
-      position: relative;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: -5%;
-        width: 110%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-        transform: translateY(-50%) scaleX(0);
-        transform-origin: left;
-        transition: transform 0.5s ease;
-      }
-
-      &:hover::after {
-        transform: translateY(-50%) scaleX(1);
-      }
-    }
-  }
-
-  .fitgreen-media {
-    width: 100%;
-    max-width: 960px;
-    margin-top: 3rem;
-    position: relative;
-    z-index: 1;
-
-    video {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.6s ease;
-    }
-
-    video:hover {
-      transform: scale(1.015);
-    }
-  }
+  text-align: center;  
 }
+.the-margin{
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.fitgreen-animated-section .text-on-scroll-container{
+  /* width: 70%; */
+}
+.fitgreen-animated-section .fitgreen-content {
+  z-index: 2;
+}
+.fitgreen-animated-section .fitgreen-content .fitgreen-headline {
+	 font-size: 3rem;
+	 font-weight: 700;
+	 margin-bottom: 1rem;
+	 opacity: 0;
+	 transform: translateY(30px);
+	 position: relative;
+	 display: inline-block;
+	 background: linear-gradient(90deg, #fff, #888, #fff);
+	 background-size: 200%;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 transition: background-position 0.4s ease;
+}
+ .fitgreen-animated-section .fitgreen-content .fitgreen-headline:hover {
+	 background-position: 200% center;
+}
+ .fitgreen-animated-section .fitgreen-content .fitgreen-subtext {
+	 font-size: 1.25rem;
+	 margin-bottom: 1rem;
+	 opacity: 0;
+	 transform: translateY(30px);
+	 position: relative;
+}
+ .fitgreen-animated-section .fitgreen-content .fitgreen-subtext::after {
+	 content: '';
+	 position: absolute;
+	 top: 50%;
+	 left: -5%;
+	 width: 110%;
+	 height: 2px;
+	 background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+	 transform: translateY(-50%) scaleX(0);
+	 transform-origin: left;
+	 transition: transform 0.5s ease;
+}
+ .fitgreen-animated-section .fitgreen-content .fitgreen-subtext:hover::after {
+	 transform: translateY(-50%) scaleX(1);
+}
+ .fitgreen-animated-section .fitgreen-media {
+	 /* width: 30%; */
+	 max-width: 960px;
+	 margin-top: 3rem;
+	 position: relative;
+	 z-index: 1;
+}
+ .fitgreen-animated-section .fitgreen-media video {
+	 width: 100%;
+	 height: auto;
+	 border-radius: 12px;
+	 object-fit: cover;
+	 box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+	 transition: transform 0.6s ease;
+}
+ 
+.comparison{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7F7;
+}
+.comparison .swipers {
+  display: flex;
+  width: 100%;
+  height: 85vh;
+}
+.comparison .swiper {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;  
+}
+.comparison .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  height: 100%;
+  position: relative;  
+}
+.comparison .swiper-slide img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  
+}
+.comparison .swiper-slide .text-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;  
+  transform: translate(-50%, -50%);  
+}
+.comparison .swiper-slide .background-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+.comparison .left-swiper .swiper-slide:nth-child(1) { background-color: #ff6b6b; }
+.comparison .left-swiper .swiper-slide:nth-child(2) { background-color: #6bc5ff; }
+.comparison .left-swiper .swiper-slide:nth-child(3) { background-color: #51cf66; }
 
+.comparison .right-swiper .swiper-slide:nth-child(1) { background-color: #f783ac; }
+.comparison .right-swiper .swiper-slide:nth-child(2) { background-color: #fcc419; }
+.comparison .right-swiper .swiper-slide:nth-child(3) { background-color: #845ef7; }
+
+.comparison .controls {
+  margin: 20px 0;
+}
+.comparison .controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.comparison .controls button:hover {
+  background-color: #555;
+}
 
 .vs-slider {
   position: relative;
@@ -545,3 +621,15 @@ button {
   }
 }
 
+.text-on-scroll { 
+  margin: 100px auto;   
+  font-size: 2rem; 
+  text-align: center;
+  padding: 50px 0;
+}
+.txt-on-scroll { font-size:2rem; letter-spacing:0.02em; }
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+}

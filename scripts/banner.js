@@ -105,3 +105,30 @@ prevButton.addEventListener("click", () => {
 // ------------------------------------------
 // GSAP Animation for FitGreen Section
 // ------------------------------------------
+gsap.registerPlugin(ScrollTrigger);
+  Splitting();
+
+  // All .char spans created by Splitting.js
+  let chars = gsap.utils.toArray(".char");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".container",
+      pin: true,
+      start: "top 60%",   // .container top hits 50% of viewport
+      end: "top 60%",     // .container top hits 20% of viewport
+      // adjust as desired
+      scrub: 3,
+      // snap: 1 / chars.length // optional! snaps to each char      
+    }
+  });
+
+  tl.to(chars, {
+    opacity: 1,
+    y: 0,
+    stagger: {
+      each: 0.02,        // 0.04s between each char (adjust faster/slower)
+      from: "start"
+    },
+    ease: "power3.out"
+  });

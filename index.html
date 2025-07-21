@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style/banner.css">
   <link rel="stylesheet" href="style/info-section.css">
 
+  <link rel="stylesheet" href="style/scroll.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -80,24 +81,104 @@
   </main>
 
   <section class="fitgreen-animated-section">
-    <div class="fitgreen-content">
-      <h1 class="fitgreen-headline">Experience Innovation</h1>
-      <p class="fitgreen-subtext">Revolutionize your world with immersive visuals and smooth transitions.</p>
-      <p class="fitgreen-subtext">Revolutionize your world with immersive visuals and smooth transitions.</p>
-      <p class="fitgreen-subtext">Revolutionize your world with immersive visuals and smooth transitions.</p>
+    <div class="the-margin">
+      <div class="text-on-scroll-container">
+        <div class="container">
+          <div class="txt-on-scroll" data-splitting>
+            GSAP, ScrollTrigger, and Splitting.js<br>
+            Character by character animation on scroll! ✨
+          </div>
+        </div>
+      </div>
 
-    </div>
-    <div class="fitgreen-media">
-      <video id="b3d75471-6d14-6d45-5306-980f3beba49c-video" autoplay="" loop=""
-        style="background-image:url(&quot;https://assets.website-files.com/60e4912ee7c15fb303f4c588/642d8b3622805212f26eee1d_Video_Leaderboard-Compressed copy-poster-00001.jpg&quot;)"
-        muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-        <source
-          src="https://assets.website-files.com/60e4912ee7c15fb303f4c588/642d8b3622805212f26eee1d_Video_Leaderboard-Compressed copy-transcode.mp4"
-          data-wf-ignore="true" />
-      </video>
+      <div class="fitgreen-media">
+        <video id="b3d75471-6d14-6d45-5306-980f3beba49c-video" autoplay="" loop=""
+          style="background-image:url(&quot;https://assets.website-files.com/60e4912ee7c15fb303f4c588/642d8b3622805212f26eee1d_Video_Leaderboard-Compressed copy-poster-00001.jpg&quot;)"
+          muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+          <source
+            src="https://assets.website-files.com/60e4912ee7c15fb303f4c588/642d8b3622805212f26eee1d_Video_Leaderboard-Compressed copy-transcode.mp4"
+            data-wf-ignore="true" />
+        </video>
+      </div>
     </div>
   </section>
 
+  <section class="comparison">
+    <div class="swipers">
+      <!-- Left Swiper -->
+      <div class="swiper left-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src='assets/h1.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Left 1</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/h2.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Left 2</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/h3.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Left 3</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/h4.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Left 4</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Swiper -->
+      <div class="swiper right-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src='assets/j1.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Right 1</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/j2.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Right 4</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/j3.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Right 3</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src='assets/j4.jpg' alt="img">
+            <div class="background-overlay"></div>
+            <div class="text-content">
+              <p>Right 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </section>
 
   <section class="vs-slider">
     <div class="vs-slide active">
@@ -199,7 +280,61 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Flip.min.js"></script>
 
+<!-- Minified version of Splitting.js from jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+
 <script src="scripts/banner.js"></script>
+<script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const lenis = new Lenis({
+    lerp: .08, // Easing amount. 0 = instant, 1 = never
+    smoothWheel: true // Enable smooth wheel scrolling
+  });
+  // This function is needed for animation frame-based scroll
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
+
+  // Left Swiper (normal direction)
+  const leftSwiper = new Swiper(".left-swiper", {
+    direction: "vertical",
+    loop: true,
+    allowTouchMove: false, 
+    autoplay: {
+      delay: 3000, // 3 seconds
+      disableOnInteraction: false, // keep autoplay even after user interaction
+    },
+  });
+
+  // Right Swiper (normal direction)
+  const rightSwiper = new Swiper(".right-swiper", {
+    direction: "vertical",
+    loop: true,
+    allowTouchMove: false, 
+    autoplay: {
+      delay: 3000,
+      reverseDirection: true, // reverse autoplay direction
+      disableOnInteraction: false,
+    },
+  });
+
+  // Single control for both
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  nextBtn.addEventListener("click", () => {
+    leftSwiper.slideNext(); // left goes up
+    rightSwiper.slidePrev(); // right goes down
+  });
+
+  prevBtn.addEventListener("click", () => {
+    leftSwiper.slidePrev(); // left goes down
+    rightSwiper.slideNext(); // right goes up
+  });
+</script>
 
 
 </html>

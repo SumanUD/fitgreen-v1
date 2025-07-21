@@ -710,3 +710,6 @@ switchSlider.addEventListener("click", () => {
     }
   };
 }
+
+
+
