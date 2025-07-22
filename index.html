@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FitGreen Home Page</title>
   <link rel="stylesheet" href="style/banner.css">
-  <link rel="stylesheet" href="style/info-section.css">
+  <!-- <link rel="stylesheet" href="style/info-section.css"> -->
 
-  <link rel="stylesheet" href="style/scroll.css">
+  <!-- <link rel="stylesheet" href="style/scroll.css"> -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -17,9 +17,19 @@
 
   <!-- header -->
   <header>
-    <!-- <h2 class="logo">
-      Fruity
-    </h2> -->
+    <div class="header-content">
+      <div class="logo">
+        Fruity
+      </div>
+      <div class="menu-list">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="cta">
+        <button>Get In Touch!</button>
+      </div>
+    </div>
   </header>
   <!-- main -->
   <main class="bannerTop">
@@ -229,8 +239,6 @@
     </div>    
   </section>
 
-
-
   <!-- <section class="info-section">
     <div class="left-part">
       <h1><span class="d-flex">we believe in good health</span></h1>
@@ -294,7 +302,148 @@
     </div>
   </section> -->
 
-  section
+  <section class="writeup">    
+    <div class="has-animation animation-ltr" data-delay="10">
+      <p class="bigger">Reveal Animation </p>
+    </div>    
+    <div class="has-animation animation-rtl" data-delay="1000">
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>        
+  </section>
+  
+
+  <section class="bottom-write-up">    
+    <div class="gallery">
+      <div class="left">
+        <div class="desktopContent">
+          <div class="desktopContentSection">
+            <h1>topic 1</h1>
+            <p>Red is a color often associated with strong emotions such as passion, love, and anger. It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.</p>
+          </div>
+          <div class="desktopContentSection">
+            <h1>topic 2</h1>
+            <p>Green is a color that is often associated with nature, growth, and harmony. It is a calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color psychology, green is said to represent balance and stability, making it a popular choice for branding and marketing in the health and wellness industry. </p>
+          </div>
+          <div class="desktopContentSection">
+            <h1>topic 3</h1>
+            <p>Pink is a color that is often associated with femininity, romance, and sweetness. It is a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing.</p>            
+          </div>
+          <div class="desktopContentSection">
+            <h1>topic 4</h1>
+            <p>Blue is a color that is often associated with calmness, trust, and reliability. It is a peaceful and serene color that can evoke feelings of stability, security, and professionalism. In color psychology, blue is said to represent loyalty and trust, making it a popular choice for branding and marketing in the finance and technology industries.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <!-- mobile content -->
+        <div class="mobileContent">
+          <div class="mobilePhoto red"></div>
+          <h1>topic 1</h1>
+          <p>Red is a color often associated with strong emotions such as passion, love, and anger. It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.</p>
+
+          <div class="mobilePhoto green"></div>
+          <h1>topic 2</h1>
+          <p>Green is a color that is often associated with nature, growth, and harmony. It is a calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color psychology, green is said to represent balance and stability, making it a popular choice for branding and marketing in the health and wellness industry. </p>
+
+          <div class="mobilePhoto pink"></div>
+          <h1>topic 3</h1>
+          <p>Pink is a color that is often associated with femininity, romance, and sweetness. It is a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing. In the world of branding and marketing, pink is often used to target a female audience or to promote products that are associated with beauty, love, or romance.</p>
+
+          <div class="mobilePhoto blue"></div>
+          <h1>topic 4</h1>
+          <p>Blue is a color that is often associated with calmness, trust, and reliability. It is a peaceful and serene color that can evoke feelings of stability, security, and professionalism. In color psychology, blue is said to represent loyalty and trust, making it a popular choice for branding and marketing in the finance and technology industries.</p>
+        </div>
+
+        <!-- desktop content -->
+
+        <div class="desktopPhotos">
+          <div class="desktopPhoto red">
+            <img src="/assets/h1.jpg" alt="">
+          </div>
+          <div class="desktopPhoto green">
+            <img src="/assets/h2.jpg" alt="">
+          </div>
+          <div class="desktopPhoto pink">
+            <img src="/assets/h3.jpg" alt="">
+          </div>
+          <div class="desktopPhoto blue">
+            <img src="/assets/h4.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>  
+
+
+
+<footer>    
+  <div class="footer">
+    <div class="bubbles">
+      <!-- 128 bubble divs, randomly sized/positioned/timed -->
+      <!-- For brevity, here are just 8 as example; you would generate all 128 for a full effect -->
+      <div class="bubble" style="--size:4.2rem; --distance:7.9rem; --position:8.2%; --time:2.7s; --delay:-3.1s;"></div>
+      <div class="bubble" style="--size:3.1rem; --distance:9.8rem; --position:66.5%; --time:3.4s; --delay:-2.8s;"></div>
+      <div class="bubble" style="--size:5.2rem; --distance:6.2rem; --position:24.8%; --time:3.6s; --delay:-2.1s;"></div>
+      <div class="bubble" style="--size:2.3rem; --distance:8.8rem; --position:44.2%; --time:3.2s; --delay:-1.8s;"></div>
+      <div class="bubble" style="--size:4.9rem; --distance:9.1rem; --position:18.7%; --time:2.8s; --delay:-3s;"></div>
+      <div class="bubble" style="--size:3.3rem; --distance:7.2rem; --position:50.0%; --time:2.2s; --delay:-2.7s;"></div>
+      <div class="bubble" style="--size:5.6rem; --distance:8.6rem; --position:70.4%; --time:3.9s; --delay:-1.6s;"></div>
+      <div class="bubble" style="--size:3.0rem; --distance:10rem; --position:61.8%; --time:2.8s; --delay:-2.2s;"></div>
+      <!-- Repeat for all 128 bubbles as needed -->
+    </div>
+    <div class="content">
+      <div>
+        <div>
+          <b>Eldew</b>
+          <a href="#">Secuce</a>
+          <a href="#">Drupand</a>
+          <a href="#">Oceash</a>
+          <a href="#">Ugefe</a>
+          <a href="#">Babed</a>
+        </div>
+        <div>
+          <b>Spotha</b>
+          <a href="#">Miskasa</a>
+          <a href="#">Agithe</a>
+          <a href="#">Scesha</a>
+          <a href="#">Lulle</a>
+        </div>
+        <div>
+          <b>Chashakib</b>
+          <a href="#">Chogauw</a>
+          <a href="#">Phachuled</a>
+          <a href="#">Tiebeft</a>
+          <a href="#">Ocid</a>
+          <a href="#">Izom</a>
+          <a href="#">Ort</a>
+        </div>
+        <div>
+          <b>Athod</b>
+          <a href="#">Pamuz</a>
+          <a href="#">Vapert</a>
+          <a href="#">Neesk</a>
+          <a href="#">Omemanen</a>
+        </div>
+      </div>
+      <div>
+        <a class="image" href="https://codepen.io/z-" target="_blank" style="background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg')"></a>
+        <p>©2019 Not Really</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<svg style="position:fixed; top:100vh;">
+  <defs>
+    <filter id="blob">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"/>
+      <!-- feComposite was commented out in your original Pug -->
+    </filter>
+  </defs>
+</svg>
 
 </body>
 
@@ -308,6 +457,8 @@
 <script src="scripts/banner.js"></script>
 <script src="https://unpkg.com/lenis@1.1.21/dist/lenis.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script>
   const lenis = new Lenis({
     lerp: .08, // Easing amount. 0 = instant, 1 = never
@@ -405,6 +556,64 @@
 
   followMouse(leftContainer, leftBtn, "left", rightBtn);
   followMouse(rightContainer, rightBtn, "right", leftBtn);
+
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseInt(el.getAttribute('data-delay'), 10) || 0;
+        setTimeout(() => {
+          el.classList.add('animate-in');
+        }, delay);
+        observer.unobserve(el); // Stop observing once animated
+      }
+    });
+  }, {
+    threshold: 0.1 // Adjust as needed (0.1 = 10% in view)
+  });
+  // Attach observer to every element
+  document.querySelectorAll('.has-animation').forEach(el => observer.observe(el));
+
+
+  const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
+  const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)")
+  gsap.set(photos, {yPercent:101})
+  const allPhotos = gsap.utils.toArray(".desktopPhoto")
+  // create
+  let mm = gsap.matchMedia();
+  // add a media query. When it matches, the associated function will run
+  mm.add("(min-width: 600px)", () => {
+    // this setup code only runs when viewport is at least 600px wide     
+    ScrollTrigger.create({
+    trigger:".gallery",
+    start:"top top",
+    end:"bottom bottom",
+    pin:".right"
+  })
+  //create scrolltrigger for each details section
+  //trigger photo animation when headline of each details section 
+  //reaches 80% of window height
+  details.forEach((detail, index)=> {
+
+    let headline = detail.querySelector("h1")
+    let animation = gsap.timeline()
+      .to(photos[index], {yPercent:0})
+      .set(allPhotos[index], {autoAlpha:0})
+    ScrollTrigger.create({
+      trigger:headline,
+      start:"top 80%",
+      end:"top 50%",
+      animation:animation,
+      scrub:true,
+      markers:false
+    })
+  })
+  return () => { // optional
+      // custom cleanup code here (runs when it STOPS matching)
+      console.log("mobile")
+    };
+  }); 
 </script>
 
 
